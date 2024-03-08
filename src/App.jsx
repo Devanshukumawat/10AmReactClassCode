@@ -8,6 +8,8 @@ import Devimage from "./Day1/media/1691224446516.jpeg"
 import Test from "./Day3/Test"
 import Counter from "./Day3/Counter";
 import Statetest from "./Day3/Statetest";
+import Form from "./Day4/Form";
+import Todo from "./Day5/Todo";
 
 
 function App() {
@@ -65,7 +67,12 @@ function App() {
 
     return ( 
       <>
-      {
+
+      <Todo/>
+
+      {/* <Form/> */}
+
+      {/* {
         ProductData.map((value,index)=>(
           <>
           <Product Pname = {value.ProductName} price={value.Price} rating={value.Rating}/>
@@ -84,7 +91,7 @@ function App() {
        <Myprops name="Manny"/>
        <Test/>
        <Counter/>
-       <Statetest/>
+       <Statetest/> */}
       </>
      );
 }
