@@ -28,3 +28,19 @@
     border-bottom-right-radius: 10px;
 }
 
+.delete_icon{
+    color: red;
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.mydiv{
+    display: flex;
+}
+
+.mydiv:hover .delete_icon{
+    display: inline;
+}
+

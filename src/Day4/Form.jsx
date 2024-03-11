@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Form() {
 
-    const [fname,setFname] =useState('')
+    const [fname,setFname] =useState('dev')
     const [lname,setLname] = useState("")
     const [fvalue,setFvalue] = useState("")
     const [lValue,setLvalue]  =useState("")
@@ -16,6 +16,7 @@ function Form() {
         setFname("")
         setLvalue(lname)
         setLname("")
+        console.log(fname,lname)
     }
 
     function handleFname(e){
