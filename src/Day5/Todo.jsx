@@ -16,14 +16,17 @@ function Todo() {
         [
             {task:"Buy I-phone",completed:true},
             {task:"Buy Car",completed:true},
-            {task:"Learn Guitar",completed:true},
+            {task:"Learn Guitar",completed:true}
              
         ]
     )
 
     function handleSubmit(){
-        setTodo([...todo,{task:value,completed:false}])
+        if(value){
+            setTodo([...todo,{task:value,completed:false}])
         setValue(" ")
+        }
+        
     }
 
     function handleCheck(index){
@@ -48,6 +51,36 @@ function Todo() {
 
     }
 
+    function handleDelete(index){
+        let myNewDelete = [...todo]
+
+       let deleteItem =  myNewDelete.filter((value,id)=>{
+            return index !== id
+        })
+
+        setTodo(deleteItem)
+
+
+
+    }
+
+    function handleUpdate(index){
+        console.log(index)
+
+        const myEdit = [...todo]
+
+        let newValue = myEdit[index]
+       
+        let editValue = prompt(`Edit Value :-  ${newValue.task}` , newValue.task)
+
+        let newObj = {task:editValue,completed:false}
+
+        myEdit.splice(index,1,newObj)
+
+        setTodo(myEdit)
+
+    }
+
     return ( 
         <>
             <div className="todo">
@@ -67,9 +100,12 @@ function Todo() {
                  />
                  
                  <span style={{textDecoration : value.completed ? "line-through": ""}} >{value.task}</span>
-                 <span class="material-symbols-outlined delete_icon">
+                 <span class="material-symbols-outlined delete_icon" onClick={()=>{handleDelete(index)}}>
                  
 cancel
+</span>
+<span class="material-symbols-outlined edit_icon" onClick={()=>{handleUpdate(index)}}>
+edit
 </span>
 </div>
                  </ul>

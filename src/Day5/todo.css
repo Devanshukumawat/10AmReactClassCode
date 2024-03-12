@@ -34,6 +34,8 @@
     margin-left: 20px;
     cursor: pointer;
     display: none;
+    background-color: white;
+    border-radius: 100%;
 }
 
 .mydiv{
@@ -43,4 +45,23 @@
 .mydiv:hover .delete_icon{
     display: inline;
 }
+
+
+.edit_icon{
+    color: green;
+    background-color: bisque;
+    border-radius: 100%;
+    font-size: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.mydiv:hover .edit_icon{
+    display: inline;
+}
+
+
 
