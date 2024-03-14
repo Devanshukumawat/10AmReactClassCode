@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./todo.css"
+import { useEffect } from "react";
 
 function Todo() {
     const [value,setValue] = useState("")
@@ -80,6 +81,23 @@ function Todo() {
         setTodo(myEdit)
 
     }
+
+    useEffect(()=>{
+
+        let myNewArray = [...todo]
+        let completedTask = myNewArray.filter((value,index)=>{
+            return value.completed
+        })
+
+        let remainingTask = myNewArray.filter((value,index)=>{
+            return ! value.completed
+        })
+
+
+
+        setCtask(completedTask.length)
+        setRtask(remainingTask.length)
+    },[todo])
 
     return ( 
         <>
