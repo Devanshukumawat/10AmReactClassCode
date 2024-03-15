@@ -11,16 +11,15 @@ function Todo() {
         setValue(e.target.value)
     }
 
+    let AllTask = JSON.parse(localStorage.getItem("Set_todo")) || [
+        {task:"Buy I-phone",completed:true},
+        {task:"Buy Car",completed:true},
+        {task:"Learn Guitar",completed:true}
+         
+    ]
     
 
-    const [todo,setTodo] = useState(
-        [
-            {task:"Buy I-phone",completed:true},
-            {task:"Buy Car",completed:true},
-            {task:"Learn Guitar",completed:true}
-             
-        ]
-    )
+    const [todo,setTodo] = useState(AllTask)
 
     function handleSubmit(){
         if(value){
@@ -71,14 +70,19 @@ function Todo() {
         const myEdit = [...todo]
 
         let newValue = myEdit[index]
+        
        
         let editValue = prompt(`Edit Value :-  ${newValue.task}` , newValue.task)
 
-        let newObj = {task:editValue,completed:false}
+        if(editValue){
+            let newObj = {task:editValue,completed:false}
 
-        myEdit.splice(index,1,newObj)
+            myEdit.splice(index,1,newObj)
+    
+            setTodo(myEdit)
+        }
 
-        setTodo(myEdit)
+      
 
     }
 
@@ -97,6 +101,9 @@ function Todo() {
 
         setCtask(completedTask.length)
         setRtask(remainingTask.length)
+
+        localStorage.setItem("Set_todo", JSON.stringify(myNewArray) )
+
     },[todo])
 
     return ( 

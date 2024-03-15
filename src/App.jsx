@@ -11,6 +11,7 @@ import Statetest from "./Day3/Statetest";
 import Form from "./Day4/Form";
 import Todo from "./Day5/Todo";
 import UseEffect from "./Day6/UseEffect";
+import Data from "./Day7/Data";
 
 
 function App() {
@@ -69,7 +70,9 @@ function App() {
     return ( 
       <>
 
-     <UseEffect/>
+      <Data/>
+
+     {/* <UseEffect/> */}
 
       {/* <Todo/> */}
 
