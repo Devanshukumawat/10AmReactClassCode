@@ -4,12 +4,18 @@ function Data() {
 
 
     const [count,setCount] = useState(1)
+    const [title,setTitle] = useState("")
+    const [image,setImage] = useState("")
+    const [desc,setDesc] = useState("")
     const [value,setValue] = useState("Manny")
 
     async function myData(){
         let result = await fetch(`https://dummyjson.com/products/${count}`)
-        let Data = await result.json()
-        console.log(Data)
+        let data = await result.json()
+        console.log(data)
+        setTitle(data.title)
+        setImage(data.images[0])
+        setDesc(data.description)
     }
     
 
@@ -22,17 +28,28 @@ function Data() {
         setCount(count+1)
     }
 
-
     function handleUpdate(){
         setValue("Dev")
     }
 
+
+
+
     return ( 
         <>
-            <h1>{count}</h1>
-          <button onClick={handleData}>Next</button>  
-          <h1>{value}</h1>
-          <button onClick={handleUpdate}>Update</button>
+
+<div className="card" style={{width: "18rem"}}>
+  <img src={image} className="card-img-top" alt="..."/>
+  <div className="card-body">
+    <h5 className="card-title">{title}</h5>
+    <p className="card-text">{desc}</p>
+    <button onClick={handleData}>Next</button>  
+  </div>
+</div>
+
+<h1>{value}</h1>
+<button onClick={handleUpdate}>Upadte</button>
+
         </>
      );
 }
