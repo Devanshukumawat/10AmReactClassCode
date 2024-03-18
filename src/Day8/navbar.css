@@ -1,0 +1,21 @@
+.navbar{
+    background-color: blueviolet;
+    color: white;
+    padding: 20px;
+}
+
+.navbar ul a{
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+}
+
+.navbar ul li{
+    display: inline;
+}
+
+.footer{
+    background-color: blueviolet;
+    color: white;
+    padding: 60px;
+}

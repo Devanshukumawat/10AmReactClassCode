@@ -22,7 +22,7 @@ function Data() {
 
     useEffect(()=>{
         myData()
-    },[count])
+    },[count,value])
 
     function handleData(){
         setCount(count+1)

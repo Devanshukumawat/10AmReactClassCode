@@ -13,6 +13,11 @@ import Todo from "./Day5/Todo";
 import UseEffect from "./Day6/UseEffect";
 import Data from "./Day7/Data";
 
+import {BrowserRouter, Route, Routes} from "react-router-dom"
+import Navbar from "./Day8/Navbar";
+import Footer from "./Day8/Footer";
+import Homepage from "./Day8/Homepage";
+
 
 function App() {
 
@@ -70,7 +75,22 @@ function App() {
     return ( 
       <>
 
-      <Data/>
+
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Homepage/>} />
+          <Route path="/todo" element={<Todo/>}/>
+          <Route path="/counter" element={<Counter/>} />
+          <Route path="/form" element={<Form/>}/>
+          <Route path="/card" element={<Card image={Devimage}/>}/>
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
+
+
+
+      {/* <Data/> */}
 
      {/* <UseEffect/> */}
 
@@ -98,6 +118,7 @@ function App() {
        <Test/>
        <Counter/>
        <Statetest/> */}
+       
       </>
      );
 }
