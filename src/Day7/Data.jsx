@@ -9,7 +9,7 @@ function Data() {
     const [desc,setDesc] = useState("")
     const [value,setValue] = useState("Manny")
 
-    async function myData(){
+    async function myData(count){
         let result = await fetch(`https://dummyjson.com/products/${count}`)
         let data = await result.json()
         console.log(data)
@@ -22,7 +22,7 @@ function Data() {
 
     useEffect(()=>{
         myData()
-    },[count,value])
+    },[count])
 
     function handleData(){
         setCount(count+1)

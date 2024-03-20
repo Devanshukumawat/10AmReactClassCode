@@ -17,6 +17,11 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Navbar from "./Day8/Navbar";
 import Footer from "./Day8/Footer";
 import Homepage from "./Day8/Homepage";
+import Muibutton from "./Day9/Muibutton";
+import MusicPlayerSlider from "./Day9/MusicPlayerSlider";
+import TestMui from "./Day10/TestMui";
+import SignInSide from "./Day10/SignInSide";
+import DrawerAppBar from "./Day10/DrawerAppBar";
 
 
 function App() {
@@ -77,9 +82,10 @@ function App() {
 
 
       <BrowserRouter>
-        <Navbar/>
+        {/* <Navbar/> */}
+        <DrawerAppBar/>
         <Routes>
-          <Route path="/" element={<Homepage/>} />
+          <Route path="/" element={<SignInSide/>} />
           <Route path="/todo" element={<Todo/>}/>
           <Route path="/counter" element={<Counter/>} />
           <Route path="/form" element={<Form/>}/>
@@ -88,6 +94,13 @@ function App() {
         <Footer/>
       </BrowserRouter>
 
+      {/* <Muibutton/> */}
+
+      {/* <MusicPlayerSlider/> */}
+
+      {/* <TestMui/> */}
+
+      {/* <SignInSide/> */}
 
 
       {/* <Data/> */}
