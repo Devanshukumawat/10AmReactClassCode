@@ -25,6 +25,7 @@ import DrawerAppBar from "./Day10/DrawerAppBar";
 import BasicTable from "./Day11/BasicTable";
 import SignUp from "./Day10/Signup";
 import MyStyle from "./Day11/MyStyle";
+import Hooks from "./Day12/Hooks";
 
 
 function App() {
@@ -83,10 +84,10 @@ function App() {
     return ( 
       <>
 
-      <MyStyle/>
+      {/* <MyStyle/> */}
 
-      {/* <BrowserRouter>
-        <Navbar/>
+      <BrowserRouter>
+        {/* <Navbar/> */}
         <DrawerAppBar/>
         <Routes>
           <Route path="/" element={<SignInSide/>} />
@@ -96,9 +97,10 @@ function App() {
           <Route path="/card" element={<Card image={Devimage}/>}/>
           <Route path="/table" element={<BasicTable/>}/>
           <Route path="/signup" element={<SignUp/>}/>
+          <Route path="/hooks" element={<Hooks/>}/>
         </Routes>
         <Footer/>
-      </BrowserRouter> */}
+      </BrowserRouter>
 
       {/* <Muibutton/> */}
 
