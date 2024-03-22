@@ -12,8 +12,10 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
+  
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
@@ -35,6 +37,9 @@ const myData = [
 ]
 
 export default function SignInSide() {
+
+  const myNevigate = useNavigate()
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -45,6 +50,20 @@ export default function SignInSide() {
 
     let useremail = data.get('email')
     let userPass = data.get('password')
+
+    if(myData[0].emailId===useremail){
+      if(myData[0].pass===userPass){
+        myNevigate("/todo")
+        console.log("Successfully Login")
+      }else{
+        myNevigate("/signup")
+        console.log("Password Not match")
+      }
+      
+    }else{
+      myNevigate("/signup")
+      console.log("User does not exist")
+    }
   };
 
   return (

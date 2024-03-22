@@ -22,6 +22,9 @@ import MusicPlayerSlider from "./Day9/MusicPlayerSlider";
 import TestMui from "./Day10/TestMui";
 import SignInSide from "./Day10/SignInSide";
 import DrawerAppBar from "./Day10/DrawerAppBar";
+import BasicTable from "./Day11/BasicTable";
+import SignUp from "./Day10/Signup";
+import MyStyle from "./Day11/MyStyle";
 
 
 function App() {
@@ -80,9 +83,10 @@ function App() {
     return ( 
       <>
 
+      <MyStyle/>
 
-      <BrowserRouter>
-        {/* <Navbar/> */}
+      {/* <BrowserRouter>
+        <Navbar/>
         <DrawerAppBar/>
         <Routes>
           <Route path="/" element={<SignInSide/>} />
@@ -90,9 +94,11 @@ function App() {
           <Route path="/counter" element={<Counter/>} />
           <Route path="/form" element={<Form/>}/>
           <Route path="/card" element={<Card image={Devimage}/>}/>
+          <Route path="/table" element={<BasicTable/>}/>
+          <Route path="/signup" element={<SignUp/>}/>
         </Routes>
         <Footer/>
-      </BrowserRouter>
+      </BrowserRouter> */}
 
       {/* <Muibutton/> */}
 
