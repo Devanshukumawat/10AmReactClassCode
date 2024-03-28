@@ -22,7 +22,8 @@ const navItems = [
     {name:"To-do",url:"/todo"},
     {name:"Counter",url:"/counter"},
     {name:"Table",url:"/table"},
-    {name:"Hooks",url:"/hooks"}
+    {name:"Hooks",url:"/hooks"},
+    {name:"Form",url:"/form"}
 ];
 
 function DrawerAppBar(props) {
