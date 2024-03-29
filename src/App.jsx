@@ -5,7 +5,7 @@ import Myprops from "./Day2/Myprops";
 import Product from "./Day2/Product";
 import MyProfile from "./Day2/media/Gallery_New_ (10).jpg"
 import Devimage from "./Day1/media/1691224446516.jpeg"
-import Test from "./Day3/Test"
+// import Test from "./Day3/Test"
 import Counter from "./Day3/Counter";
 import Statetest from "./Day3/Statetest";
 import Form from "./Day4/Form";
@@ -26,6 +26,7 @@ import BasicTable from "./Day11/BasicTable";
 import SignUp from "./Day10/Signup";
 import MyStyle from "./Day11/MyStyle";
 import Hooks from "./Day12/Hooks";
+import Test from "./Day13/Test";
 
 
 function App() {
@@ -98,6 +99,7 @@ function App() {
           <Route path="/table" element={<BasicTable/>}/>
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/hooks" element={<Hooks/>}/>
+          <Route path="/tailwind" element={<Test/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
