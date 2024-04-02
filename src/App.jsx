@@ -27,6 +27,8 @@ import SignUp from "./Day10/Signup";
 import MyStyle from "./Day11/MyStyle";
 import Hooks from "./Day12/Hooks";
 import Test from "./Day13/Test";
+import TailwindComp from "./TailwindComp";
+import Weather from "./Weather/Weather";
 
 
 function App() {
@@ -103,6 +105,10 @@ function App() {
         </Routes>
         <Footer/>
       </BrowserRouter>
+
+      <TailwindComp/>
+
+      <Weather/>
 
       {/* <Muibutton/> */}
 
