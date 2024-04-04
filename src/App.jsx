@@ -29,6 +29,7 @@ import Hooks from "./Day12/Hooks";
 import Test from "./Day13/Test";
 import TailwindComp from "./TailwindComp";
 import Weather from "./Weather/Weather";
+import HooksRef from "./Day14/HooksRef";
 
 
 function App() {
@@ -102,13 +103,13 @@ function App() {
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/hooks" element={<Hooks/>}/>
           <Route path="/tailwind" element={<Test/>}/>
+          <Route path="/weather" element={<Weather/>}/>
+          <Route path="/Hooksref" element={<HooksRef/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
 
-      <TailwindComp/>
-
-      <Weather/>
+      
 
       {/* <Muibutton/> */}
 
