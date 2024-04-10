@@ -26,7 +26,9 @@ const navItems = [
     {name:"Form",url:"/form"},
     {name:"Tailwind",url:"/tailwind"},
     {name:"Weather",url:"/weather"},
-    {name:"Hooks",url:"/Hooksref"}
+    {name:"Hooks",url:"/Hooksref"},
+    {name:"Prop",url:"/prop"},
+    {name:"Style",url:"/style"}
 ];
 
 function DrawerAppBar(props) {

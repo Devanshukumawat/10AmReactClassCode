@@ -1,6 +1,7 @@
 // import { useReducer } from "react";
 
-import { useEffect, useMemo, useState } from "react";
+import {  useMemo, useState } from "react";
+import  HookStyle from "../styleComp/style.module.css"
 
 // function Hooks() {
 
@@ -103,7 +104,7 @@ function Hooks() {
 
 
         <h1>{name}</h1>
-        <button onClick={()=>{setName("Dev")}}>Update</button>
+        <button onClick={()=>{setName("Dev")}} className={HookStyle.txt_btn}>Update</button>
 
 
         </>

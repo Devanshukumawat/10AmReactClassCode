@@ -1,15 +1,12 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 
 function Weather() {
   const [cityName, setCityName] = useState("");
   const [weather, setWeather] = useState({});
-  console.log(weather);
 
   function handleChange(e) {
     setCityName(e.target.value);
   }
-
- 
 
   function handleSearch() {
     const apiKey = "87a473b178ae192b72889c2b6418fce7";
@@ -29,8 +26,6 @@ function Weather() {
         });
     }
   }
-
- 
 
   return (
     <div className="bg-body_image bg-cover bg-no-repeat h-screen flex justify-center items-center">
